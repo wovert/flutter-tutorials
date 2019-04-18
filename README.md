@@ -87,8 +87,6 @@ Android Studio下载地址：http://www.android-studio.org/
 
 如果你有安装，那么第一步要作的是允许协议（android-licenses）。允许方法就是在终端运行如下命令：`flutter doctor --android-licenses`
 
-
-
 ### 一条命令快速开启虚拟机
 
 > 制作一个批处理文件，来直接开启AVD虚拟机
@@ -117,14 +115,32 @@ Android Studio下载地址：http://www.android-studio.org/
   - `-netdelay none` :设置模拟器的网络延迟时间，默认为none，就是没有延迟。
   - `-netspeed full`: 设置网络加速值，full代表全速。
 
-### flutter run 开启预览
+### 用flutter 命令建立项目
 
-现在模拟器也有了，VSCode也支持Flutter开发了。现在可以在VSCode中直接打开终端，快捷键是`ctrl+~`，然后在终端中输入下面的命令。
+```sh
+# flutter create hello_world_app
+```
+
+### VSCode 配置并建立项目
+
+- 打开命令面板(快捷键：`Ctrl + Shift + P`
+- 安装扩展，搜索 flutter点击安装，发现 Dart 也一起安装好了
+- 打开命令面板输入 `doctor`，选择 `Flutter: Run Flutter Doctor`
+- 查看 “OUTPUT” 窗口中的输出是否有问题
+- 创建项目
+  - 打开命令面板
+  - 选择 `Flutter: New Project`
+  - 项目命名，遵循谷歌下划线命名，使用驼峰命名会报错
+
+### 配置移动设备
+
+1. 将自己的手机连接到电脑，打开**开发者模式**（连续点击版本号
+2. 进入开发者选项，打开 **USB 调试**（不同手机'开发者选项'在不同位置）
+3. 检查是否连接成功
+4. 按 F5 键或点击 **调试>启动调试**(Debug>Start Debugging)，等待手机出现画面 
+5. 体验热重载: 打开`main.dart` 文件 找到 `home: new MyHomePage(title: 'Flutter Demo Home Page')`,把 `title`里的内容改为`VSCode Flutter Demo`保存， 就可以在手机上看到更改了
+
+### flutter run 开启预览
 
 `flutter run`
 
-经过短暂的编译后就会启动我们的程序了
-
-到此处，终于搭建出了适合前端程序员的开发环境
-
-#
