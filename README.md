@@ -144,3 +144,7 @@ Android Studio下载地址：http://www.android-studio.org/
 
 `flutter run`
 
+``` sh
+$ flutter config --android-sdk E:\adt-bundle-windows-x86_64-20140702\sdk
+$ flutter config --android-studio-dir C:\Android\Android Studio
+```
