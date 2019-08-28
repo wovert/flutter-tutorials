@@ -1,5 +1,13 @@
 # Flutter
 
+## Flutter History
+
+- 2014.10 Open the Sky
+- 2015.10 Rename Flutter
+- 2017.5 Google I/O
+- 2018.6 1.0 发布
+- 2019.2 1.2 发布（支持Web）
+
 ## What Flutter
 
 > Flutter allows you to build beautiful native apps on iOS and Android from a single codebase.
@@ -148,3 +156,18 @@ Android Studio下载地址：http://www.android-studio.org/
 $ flutter config --android-sdk E:\adt-bundle-windows-x86_64-20140702\sdk
 $ flutter config --android-studio-dir C:\Android\Android Studio
 ```
+
+## 常用项目
+
+- 导航框架：Scaffold + PageView
+- http库：http
+- 页面路由：Navigator
+- 监听列表怒动：NotificationListener
+- 定制化需求：自定义组件
+- native代码封装/naitive SDK的调用：Native Modules
+- native SDK：AI语音
+- native 与 fluter 通信：Channel通信
+- flutter与H5/Flutter与iOS/Flutter与Android混合开发
+- flutter gridview（瀑布流布局）: 插件
+- flutter 官方组件
+
