@@ -176,7 +176,7 @@ $ pod setup
 
 - 将Flutter项目目录中通过 `$ open ios/Runner.xcworkspace` 打开默认的Xcode workspace
 - 在Xcode中，选择导航面板左侧中的Runner项目
-- 在**Runner target** 设置页面中，确保在 **常规>签名>团队** 下选择**开发团队**。选择一个团队时，Xcode会**创建并下载开发证书**，设备注册账户，并创建和下载配置文件
+- 在**Runner target** 设置页面中，确保在 **General>Signing>Team** 下选择**开发团队**。选择一个团队时，Xcode会**创建并下载开发证书**，设备注册账户，并创建和下载配置文件
   - 第一个iOS开发项目，需要使用**Apple ID登录Xcode**
 - 第一次attach真机设备进行iOS开发时，需要同时信任你的Mac和该设备上的开发证书。首次将iOS设备连接到Mac时，请在对话框中选择 Trust。然后，转到iOS设备上的设置应用程序，**选择常规>设备管理** 并信任您的证书
 - 如果Xcode中的自动签名失败，清验证项目的 **General > Identity > Bundle Identifier** 值是否唯一
