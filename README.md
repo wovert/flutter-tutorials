@@ -44,6 +44,96 @@ Flutter 的官方网站为我们提供了一个[**showcase**](https://github.com
 
 ## 环境搭建
 
+- 选择OS：
+  - Windows: 无法开发iOS
+  - Mac: 开发iOS/Android
+- 开发工具：Android Studio VS Visual Studio Code
+  - Visual Studio Code
+    - 前端开发利器
+    - 无法调试Android
+  - Android
+    - Android 开发工具
+    - 可以调试
+
+### Mac 下搭建Flutter开发环境
+
+#### 1.系统要求
+
+- OS: macOS 64-bit
+- Disk: 700MB(不包括Xcode或Android Studio的硬盘空间)
+- Tool: Flutter 依赖这些命令行工具：bash/curl/git-2.x/mkdir/rm/unzip/which
+
+#### 2.设置 Flutter 镜像（非必须）
+
+- 由于国内访问Flutter可能会受到限制，Flutter 官方为中国开发者搭建了临时镜像。环境变量加入到用户环境变量中
+
+Macintosh HD -> Users -> 用户名 -> .bash_profile
+```sh
+$ cd ~
+#$ git clone -b dev https://github.com/flutter/flutter.git
+$ vim ~/.bash_profile
+#Flutter镜像
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+# export PATH="$PWD/flutter/bin:$PATH"
+#$ cd ./flutter
+#$ flutter doctor
+```
+
+**注意**：此镜像为临时镜像，并不能保证一直可用，可以从 [Using Flutter in China](https://flutter.dev/community/china) 上获得有关镜像服务器的最新动态
+
+#### 3.获取Flutter SDK
+
+[下载Fluter SDK安装包]
+
+```sh
+$ cd ~ 
+$ curl -O https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.2.1-stable.zip
+$ unzip flutter_macos_v1.2.1-stable.zip
+$ vim ~/.bash_profile
+#Flutter环境变量
+export PATH="$PATH:$PWD/flutter/bin"
+$ source ~/.bash_profile
+
+运行 flutter doctor
+$ flutter doctor
+$ flutter doctor --android-licenses
+
+配置android环境变量
+$ vim ~/.bash_profile
+#android 环境变量
+export ANDROID_HOME=$PWD/Library/Android/sdk
+#Android 模拟器路径
+export PATH=${PATH}:${ANDROID_HOME}/emulator
+#Android tools 路径
+export PATH=${PATH}:${ANDROID_HOME}/tools
+#Android 平台工具路径
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+#Android NDK路径
+ANDROID_NDK_HOME=$PWD/Library/Android/ndk/android-ndk-r10e
+
+$ flutter
+```
+> 第一次运行一个 `flutter` 命令(`flutter doctor`)时，它会下载依赖项并自行编译。以后再运行就会快得多。
+
+#### 4.iOS 开发环境设置
+
+> 要用 Flutter 开发 iOS App 需要 Xcode 9.0或更高版本
+
+1. 安装 Xcode 9.0 或更新版本（苹果应用商店）
+2. 配置Xcode命令行工具以使用新安装的Xcode版本
+
+`sudo xcode-select --switch /Application/Xcode.app/Contents/Developer`
+
+以上路径时对于最新版Xcode的路径。如果需要使用不同的Xcode版本，需要指定相应路径
+
+3. 确保Xcode许可协议是通过打开一次Xcode或通过命令`sudo xcodebuild -license`同意过了
+
+接下来可以使用Xcode，再iOS设备或模拟器上运行Flutter App
+
+#### 5.Android 开发环境设置
+
+
 ### Windows 系统的基本要求
 
 - **操作系统**：必须`windows7`以上 `64`位操作系统
