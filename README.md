@@ -139,12 +139,21 @@ $ flutter
 2. 通过模拟器菜单的 硬件>设备，确保打开的是64位 iPhone 5s或者更新的模拟器
 3. 通过模拟器的 Windows>Scale 菜单下设置设备比例
 
-#### 6. 创建和运行一个flutter项目
+#### 6. Android 创建插件
+
+- Configure -> Dart/Flutter
+
+#### 7. 创建和运行一个flutter项目
 
 1. 通过命令行创建一个 Flutter 项目
 `$ flutter create my_app`
 
+2. 命令运行完成之后会再当前目录下创建一个名为`my_app`的flutter项目，然后通过一个命令可以运行它：
 
+```sh
+$ cd my_app
+$ flutter run
+```
 
 ### Windows 系统的基本要求
 
