@@ -123,7 +123,7 @@ $ flutter
 1. 安装 Xcode 9.0 或更新版本（苹果应用商店）
 2. 配置Xcode命令行工具以使用新安装的Xcode版本
 
-`sudo xcode-select --switch /Application/Xcode.app/Contents/Developer`
+`sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer`
 
 以上路径时对于最新版Xcode的路径。如果需要使用不同的Xcode版本，需要指定相应路径
 
@@ -132,6 +132,18 @@ $ flutter
 接下来可以使用Xcode，再iOS设备或模拟器上运行Flutter App
 
 #### 5.Android 开发环境设置
+
+再iOS模拟器上运行并测试Flutter应用
+
+1. 打开一个 iOS 模拟器 `$ open -a Simulator`
+2. 通过模拟器菜单的 硬件>设备，确保打开的是64位 iPhone 5s或者更新的模拟器
+3. 通过模拟器的 Windows>Scale 菜单下设置设备比例
+
+#### 6. 创建和运行一个flutter项目
+
+1. 通过命令行创建一个 Flutter 项目
+`$ flutter create my_app`
+
 
 
 ### Windows 系统的基本要求
