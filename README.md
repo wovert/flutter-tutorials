@@ -155,6 +155,34 @@ $ cd my_app
 $ flutter run
 ```
 
+#### 8. Flutter 安装到 iOS真机上
+
+`flutter run` 将 Flutter 应用安装到iOS真机设备，需要一些额外的工具和一个Apple账户，还需要再Xcode中进行设置
+
+> 用Xcode来将 Flutter 运行在真机上更简单，点一下`run` 按钮即可
+
+1. 安装 [Homebrew](https://brew.sh)
+2. 更新 homebrew `$ brew update`
+3. 打开终端并运行这些命令用来将flutter应用安装到iOS设备的工具
+```bash
+$ brew install --HEAD usbmuxd
+$ brew unlink usbmuxd && brew link usbmuxd
+$ brew install --HEAD libimobiledevice
+$ brew install ideviceinstaller ios-deploy cocoapods
+$ pod setup
+```
+**注意**这些命令当中人物一个失败并出现错误，可运行`brew doctor`并按照说明解决问题
+4. 遵循Xcode签名流程来配置项目
+
+- 将Flutter项目目录中通过 `$ open ios/Runner.xcworkspace` 打开默认的Xcode workspace
+- 在Xcode中，选择导航面板左侧中的Runner项目
+- 在**Runner target** 设置页面中，确保在 **常规>签名>团队** 下选择**开发团队**。选择一个团队时，Xcode会**创建并下载开发证书**，设备注册账户，并创建和下载配置文件
+  - 第一个iOS开发项目，需要使用**Apple ID登录Xcode**
+- 第一次attach真机设备进行iOS开发时，需要同时信任你的Mac和该设备上的开发证书。首次将iOS设备连接到Mac时，请在对话框中选择 Trust。然后，转到iOS设备上的设置应用程序，**选择常规>设备管理** 并信任您的证书
+- 如果Xcode中的自动签名失败，清验证项目的 **General > Identity > Bundle Identifier** 值是否唯一
+
+5. 通过`flutter run`运行启动项目
+
 ### Windows 系统的基本要求
 
 - **操作系统**：必须`windows7`以上 `64`位操作系统
