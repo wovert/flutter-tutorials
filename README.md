@@ -183,6 +183,29 @@ $ pod setup
 
 5. 通过`flutter run`运行启动项目
 
+### Android 开发环境设置
+
+#### 1. 安装Android Studio
+
+- [https://developer.android.com/studio](https://developer.android.com/studio)
+- [https://developer.android.google.cn/studio](https://developer.android.google.cn/studio)
+
+- [Android Studio 的安装与配置说明](https://developer.android.google.cn/studio/intro)
+
+#### 2. 启动 Android Studio
+
+执行 Android Studio 安装向导。这将安装最新的Android SDK，Android SDK平台工具和Android SDK构建工具
+
+#### 3. Android模拟器上运行Flutter
+
+- 启用 VM **acceleration**
+- 启动 Android Studio > Tools > Android > AVD Manager 并选择 `Create Virtual Device`
+- 选择一个设备并选择Next按钮
+- 为模拟的Android版本选择一个或多个系统镜像，建议使用X86或X86_64的镜像
+- Emulated Performance下，选择 Hardware - GLES 2.0 以启用硬件加速
+- 验证 AVD 配置是否正确，然后选择Finish
+- 在Android Virtual Device Manager中，点击工具栏的 `Run`，模拟器启动并显示所选操作系统
+
 ### Windows 系统的基本要求
 
 - **操作系统**：必须`windows7`以上 `64`位操作系统
