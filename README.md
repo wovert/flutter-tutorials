@@ -198,7 +198,7 @@ $ pod setup
 
 #### 3. Android模拟器上运行Flutter
 
-- 启用 VM **acceleration**
+- 启用 [VM acceleration](https://developer.android.com/studio/run/emulator-acceleration)
 - 启动 Android Studio > Tools > Android > AVD Manager 并选择 `Create Virtual Device`
 - 选择一个设备并选择Next按钮
 - 为模拟的Android版本选择一个或多个系统镜像，建议使用X86或X86_64的镜像
